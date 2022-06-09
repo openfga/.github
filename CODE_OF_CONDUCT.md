@@ -33,7 +33,7 @@ This Code of Conduct applies within all of our open source community spaces, and
 ## Enforcement
 Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to us at community@openfga.dev. All complaints will be reviewed and investigated promptly and fairly.
 
-We pledge to maintain the confidentiality of the reporter of any incident and only share when we determine it is necessary to protect the Okta Service, individuals, or for safety, legal compliance, or other such legitimate reasons. Should we need to, Okta will process any personal data you share in accordance with our Privacy Policy. 
+We pledge to maintain the confidentiality of the reporter of any incident and only share when we determine it is necessary to protect the Okta Service, individuals, or for safety, legal compliance, or other such legitimate reasons. Should we need to, Okta will process any personal data you share in accordance with our [Privacy Policy](https://www.okta.com/privacy-policy/). 
 
 ## Attribution
 This Code of Conduct is adapted from the Contributor Covenant, version 2.1, available at https://www.contributor-covenant.org/version/2/1/code_of_conduct.html.
