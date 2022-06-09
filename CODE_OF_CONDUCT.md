@@ -31,7 +31,7 @@ We have the right and responsibility to remove, edit, or reject comments, commit
 This Code of Conduct applies within all of our open source community spaces, and also applies when an individual is officially representing the open source community in public spaces. 
 
 ## Enforcement
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to us at community@openfga.dev. All complaints will be reviewed and investigated promptly and fairly.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to us at contact@openfga.dev. All complaints will be reviewed and investigated promptly and fairly.
 
 We pledge to maintain the confidentiality of the reporter of any incident and only share when we determine it is necessary to protect the Okta Service, individuals, or for safety, legal compliance, or other such legitimate reasons. Should we need to, Okta will process any personal data you share in accordance with our [Privacy Policy](https://www.okta.com/privacy-policy/). 
 
