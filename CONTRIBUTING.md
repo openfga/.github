@@ -40,7 +40,7 @@ The commit contains the following structural elements, to communicate intent to 
 
 When you're ready, submit a pull request!
 
-* As with any community interaction, you must follow the [Code of Conduct][coc].
+* As with any community interaction, you must follow the [Code of Conduct][./CODE_OF_CONDUCT.md].
 
 * All changes must have adequate test coverage. For instruction on writing and running the various test suites, see Testing your changes.
 
@@ -61,3 +61,14 @@ In an ideal world, every pull request is small, but the codebase is large and so
 [coc]: [https://github.com/openfga/openfga/CODE_OF_CONDUCT.md]
 [discord]: [https://discord.com/invite/pvbNmqC]
 
+## Ready to Contribute
+
+To contribute to the OpenFGA project, we ask that the changes are:
+
+* [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) Licensed.
+
+* Dependencies & sub dependencies have to have compatible licenses. The repos have [FOSSA checks](https://fossa.com/) integrated as part of their CICD github actions.
+
+* Have to pass several security tests. The repos have [Snyk](https://snyk.io/) and [Semgrep](https://semgrep.dev/) integrated as part of their CICD github actions.
+
+* Have minimal to no-dependencies, to help with maintenance, security and legal constraints.
