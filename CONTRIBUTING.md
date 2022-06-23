@@ -40,13 +40,21 @@ The commit contains the following structural elements, to communicate intent to 
 
 When you're ready, submit a pull request!
 
-* As with any community interaction, you must follow the [Code of Conduct][./CODE_OF_CONDUCT.md].
+* As with any community interaction, you must follow the [Code of Conduct](./CODE_OF_CONDUCT.md).
 
 * All changes must have adequate test coverage. For instruction on writing and running the various test suites, see Testing your changes.
 
 * All contributors should sign the [Contributor License Agreement](https://cla-assistant.io/okta/). If you haven't signed it, you'll get prompted to sign it the first time you submit a Pull Request.
 
 * The documentation should be updated (in a separate, linked PR), but if you're not confident in your technical writing you may skip this step.
+
+* All changes are required to be [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) Licensed.
+
+* Dependencies & sub dependencies have to have compatible licenses. The existing repositories have [FOSSA checks](https://fossa.com/) integrated as part of their Github Actions CI/CD workflow. New repositories will need to have similar checks in place.
+
+* New contributions have to pass several security tests. The existing repositories have [Snyk](https://snyk.io/) and [Semgrep](https://semgrep.dev/) integrated as part of their Github Actions CI/CD workflow. New repositories will need to have similar checks in place.
+
+* Contributions should introduce minimal to no dependencies. This helps with maintenance as well as security and legal considerations.
 
 ### Structure and Behaviour
 
@@ -60,15 +68,3 @@ In an ideal world, every pull request is small, but the codebase is large and so
 
 [coc]: [https://github.com/openfga/openfga/CODE_OF_CONDUCT.md]
 [discord]: [https://discord.com/invite/pvbNmqC]
-
-## Ready to Contribute
-
-To contribute to the OpenFGA project, we ask that the changes are:
-
-* [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) Licensed.
-
-* Dependencies & sub dependencies have to have compatible licenses. The repos have [FOSSA checks](https://fossa.com/) integrated as part of their CICD github actions.
-
-* Have to pass several security tests. The repos have [Snyk](https://snyk.io/) and [Semgrep](https://semgrep.dev/) integrated as part of their CICD github actions.
-
-* Have minimal to no-dependencies, to help with maintenance, security and legal constraints.
