@@ -5,8 +5,6 @@ By submitting a PR to this repository, you agree to the terms within the [OpenFG
 If your PR is under active development, please submit it as a "draft". Once it's ready, open it up for review.
 -->
 
-<!-- Provide a brief summary of the changes -->
-
 ## Description
 <!-- Please provide a detailed description of the changes here -->
 
@@ -14,5 +12,5 @@ If your PR is under active development, please submit it as a "draft". Once it's
 <!-- Provide a list of any applicable references here (Github Issue, [OpenFGA RFC](https://github.com/openfga/rfcs), other PRs, etc..) -->
 
 ## Review Checklist
-- [ ] I have added documentation for new/changed functionality in this PR or in [openfga.dev](https://github.com/openfga/openfga.dev)
-- [ ] The correct base branch is being used, if not `main`
+- [ ] If relevant, I have added documentation for new/changed functionality in this PR or in [openfga.dev](https://github.com/openfga/openfga.dev)
+- [ ] If relevant, I have added a changelog entry

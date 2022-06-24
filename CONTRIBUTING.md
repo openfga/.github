@@ -44,6 +44,8 @@ When you're ready, submit a pull request!
 
 * All changes must have adequate test coverage. For instruction on writing and running the various test suites, see Testing your changes.
 
+* If relevant, add a changelog entry.
+
 * All contributors should sign the [Contributor License Agreement](https://cla-assistant.io/okta/). If you haven't signed it, you'll get prompted to sign it the first time you submit a Pull Request.
 
 * The documentation should be updated (in a separate, linked PR), but if you're not confident in your technical writing you may skip this step.
