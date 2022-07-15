@@ -2,7 +2,7 @@
 
 It takes a lot of work from a lot of people to build a great authorization system. This document provides an outline for interacting with the OpenFGA community and its governance structure, as well as the nitty-gritty details how to write, test, and submit code changes. If you run into any trouble, email us at [community@openfga.dev](mailto:community@openfga.dev) or ask for help in our [Discord][discord] community.
 
-## Contribution process
+## Contribution Process
 
 OpenFGA welcomes feedback and contributions from anyone who might be interested in helping the project.
 
@@ -12,7 +12,23 @@ If you are planning to implement a new feature, you may want to submit an [RFC](
 
 The rest of this document describes how to contribute code, but there are many other ways to contribute that are incredibly helpful: helping others in Discussions and Discord, providing feedback on RFCs and releases, triaging Issues, improving the documentation - any little bit helps.
 
-## Commits
+## Submitting a Pull Request to an OpenFGA Repository
+
+1. Read our [Pull Request Requirements](#pull-request-requirements), [Pull Request Structure and Behaviour](#pull-request-structure-and-behaviour) and [Commit Guidelines](#commit-guidelines) to understand what to include in commits and PRs.
+
+2. Fork the OpenFGA repository to your own GitHub account. ([Forking a repo on GitHub](https://docs.github.com/en/get-started/quickstart/fork-a-repo#forking-a-repository)).
+
+3. Clone your forked repo locally. ([Cloning your forked repository](https://docs.github.com/en/get-started/quickstart/contributing-to-projects#cloning-a-fork)).
+
+4. Perform the edits you wish to contribute in your cloned fork. ([Making and pushing changes](https://docs.github.com/en/get-started/quickstart/contributing-to-projects#making-and-pushing-changes)).
+
+5. When ready, commit your changes and push them to your fork.
+
+6. After you have commit, push this commit to your fork.
+
+7. Open a pull request to the OpenFGA repository. ([Making a Pull Request](https://docs.github.com/en/get-started/quickstart/contributing-to-projects#making-a-pull-request)).
+
+## Commit Guidelines
 
 Check out the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) website to get ideas about how an ideal commit should be structured: 
 
@@ -26,17 +42,17 @@ Check out the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0
 
 The commit contains the following structural elements, to communicate intent to the consumers of your library:
 
-1. fix: a commit of the type fix patches a bug in your codebase (this correlates with PATCH in Semantic Versioning).
+* fix: a commit of the type fix patches a bug in your codebase (this correlates with PATCH in Semantic Versioning).
 
-1. feat: a commit of the type feat introduces a new feature to the codebase (this correlates with MINOR in Semantic Versioning).
+* feat: a commit of the type feat introduces a new feature to the codebase (this correlates with MINOR in Semantic Versioning).
 
-1. BREAKING CHANGE: a commit that has a footer BREAKING CHANGE:, or appends a ! after the type/scope, introduces a breaking API change (correlating with MAJOR in Semantic Versioning). A BREAKING CHANGE can be part of commits of any type.
+* BREAKING CHANGE: a commit that has a footer BREAKING CHANGE:, or appends a ! after the type/scope, introduces a breaking API change (correlating with MAJOR in Semantic Versioning). A BREAKING CHANGE can be part of commits of any type.
 
-1. types other than fix: and feat: are allowed, for example @commitlint/config-conventional (based on the the Angular convention) recommends build:, chore:, ci:, docs:, style:, refactor:, perf:, test:, and others.
+* types other than fix: and feat: are allowed, for example @commitlint/config-conventional (based on the the Angular convention) recommends build:, chore:, ci:, docs:, style:, refactor:, perf:, test:, and others.
 
-1. footers other than BREAKING CHANGE: <description> may be provided and follow a convention similar to git trailer format.
+* footers other than BREAKING CHANGE: <description> may be provided and follow a convention similar to git trailer format.
 
-## Pull request requirements
+### Pull Request Requirements
 
 When you're ready, submit a pull request!
 
@@ -56,7 +72,7 @@ When you're ready, submit a pull request!
 
 * Contributions should introduce minimal to no dependencies. This helps with maintenance as well as security and legal considerations.
 
-### Structure and Behaviour
+### Pull Request Structure and Behaviour
 
 In an ideal world, every pull request is small, but the codebase is large and sometimes complex changes cannot be avoided. To ease PR reviews, there are a few practices we've found helpful:
 
