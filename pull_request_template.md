@@ -16,4 +16,4 @@ If your PR is under active development, please submit it as a "draft". Once it's
 ## Review Checklist
 - [ ] I have added documentation for new/changed functionality in this PR or in [openfga.dev](https://github.com/openfga/openfga.dev)
 - [ ] The correct base branch is being used, if not `main`
-- [ ] I have added the required unit tests
+- [ ] I have added tests to validate that the change in functionality is working as expected
