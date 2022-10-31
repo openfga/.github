@@ -1,5 +1,9 @@
 ## Introducing: OpenFGA 👋
 
+[![Discord Server](https://img.shields.io/discord/759188666072825867?color=7289da&logo=discord "Discord Server")](https://discord.com/channels/759188666072825867/930524706854031421)
+[![Twitter](https://img.shields.io/twitter/follow/openfga?color=%23179CF0&logo=twitter&style=flat-square "@openfga on Twitter")](https://twitter.com/openfga)
+[![CLOMonitor](https://img.shields.io/endpoint?url=https://clomonitor.io/api/projects/cncf/openfga/badge)](https://clomonitor.io/projects/cncf/openfga)
+
 OpenFGA is a high performance and flexible authorization/permission engine built for developers and inspired by [Google Zanzibar](https://research.google/pubs/pub48190/). It incorporates powerful [Relationship-Based Access Control (ReBAC)](https://en.wikipedia.org/wiki/Relationship-based_access_control) and [Attribute Based Access Control (ABAC)](https://en.wikipedia.org/wiki/Attribute-based_access_control) concepts with a domain-specific language that makes it easy to craft authorization and permission solutions that can grow and evolve to any use case, at any scale.
 
 OpenFGA was [donated to the Cloud Native Computing Foundation](https://www.cncf.io/projects/openfga/) on September 14, 2022, and is currently at the Sandbox level of graduation.
