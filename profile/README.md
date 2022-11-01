@@ -47,3 +47,4 @@ In addition to code changes, we welcome feedback about the user experience and d
 * **Documentation**: Read about OpenFGA at the [project's website and documentation repository, https://openfga.dev](https://openfga.dev).
 * **Discord**: Join the conversation on the [Auth0 Labs Discord](https://discord.gg/8naAwJfWN6), where FGA has channels specific for general chat, announcements about the product, support, feedback.
 * **Discussions**: Get help, talk about new features, and give feedback to the core team that's iterating on OpenFGA in the repo's [Discussions](https://github.com/orgs/openfga/discussions)
+* **Community Projects**: We're building amazing things with OpenFGA. Check them out in our [Community Projects](https://github.com/openfga/community#community-projects) list.
