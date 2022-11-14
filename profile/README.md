@@ -38,7 +38,7 @@ Centralizing your authorization logic and decisions into a single service that h
 
 It takes a lot of work from a lot of people to build a great authorization system. Read this [CONTRIBUTING.md](https://github.com/openfga/.github/blob/main/CONTRIBUTING.md) guide for an outline for interacting with the OpenFGA community and its governance structure, as well as the nitty-gritty details how to write, test, and submit code changes. If you run into any trouble, email us at community@openfga.dev or ask for help in our Discord community.
 
-In addition to code changes, we welcome feedback about the user experience and documentation experience, the product's architecture, new feature ideas, and other discussion ideas you might have. Visit our [Github Discussions Board](https://github.com/orgs/openfga/discussions) or [Discord](https://discord.gg/8naAwJfWN6)and join the conversation!
+In addition to code changes, we welcome feedback about the user experience and documentation experience, the product's architecture, new feature ideas, and other discussion ideas you might have. Visit our [Github Discussions Board](https://github.com/orgs/openfga/discussions) or [Discord](https://discord.gg/8naAwJfWN6) and join the conversation!
 
 ---
 
