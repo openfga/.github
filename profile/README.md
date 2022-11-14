@@ -6,7 +6,7 @@
 
 OpenFGA is a high performance and flexible authorization/permission engine built for developers and inspired by [Google Zanzibar](https://research.google/pubs/pub48190/). It incorporates powerful [Relationship-Based Access Control (ReBAC)](https://en.wikipedia.org/wiki/Relationship-based_access_control) and [Attribute Based Access Control (ABAC)](https://en.wikipedia.org/wiki/Attribute-based_access_control) concepts with a domain-specific language that makes it easy to craft authorization and permission solutions that can grow and evolve to any use case, at any scale.
 
-OpenFGA was [donated to the Cloud Native Computing Foundation](https://www.cncf.io/projects/openfga/) on September 14, 2022, and is currently at the Sandbox level of graduation.
+OpenFGA was originally developed by Auth0/Okta, and  [donated to the Cloud Native Computing Foundation](https://www.cncf.io/projects/openfga/) on September 14, 2022, and is currently at the Sandbox level of graduation.
 
 ---
 
