@@ -34,17 +34,10 @@ Centralizing your authorization logic and decisions into a single service that h
 
 ---
 
-### 🌈 Contribution guidelines
-
-It takes a lot of work from a lot of people to build a great authorization system. Read this [CONTRIBUTING.md](https://github.com/openfga/.github/blob/main/CONTRIBUTING.md) guide for an outline for interacting with the OpenFGA community and its governance structure, as well as the nitty-gritty details how to write, test, and submit code changes. If you run into any trouble, email us at community@openfga.dev or ask for help in our Discord community.
-
-In addition to code changes, we welcome feedback about the user experience and documentation experience, the product's architecture, new feature ideas, and other discussion ideas you might have. Visit our [Github Discussions Board](https://github.com/orgs/openfga/discussions) or [Discord](https://discord.gg/8naAwJfWN6) and join the conversation!
-
----
-
 ### 👩‍💻 Useful resources
 
+* **Contributing**: Read this [CONTRIBUTING.md](https://github.com/openfga/.github/blob/main/CONTRIBUTING.md) guide for an outline for interacting with the OpenFGA community and its governance structure, as well as the nitty-gritty details how to write, test, and submit code changes.
 * **Documentation**: Read about OpenFGA at the [project's website and documentation repository, https://openfga.dev](https://openfga.dev).
 * **Discord**: Join the conversation on [Discord](https://discord.gg/8naAwJfWN6), where FGA has channels specific for general chat, announcements about the product, support, feedback.
-* **Discussions**: Get help, talk about new features, and give feedback to the core team that's iterating on OpenFGA in the repo's [Discussions](https://github.com/orgs/openfga/discussions)
+* **Discussions**: Get help, talk about new features, and give feedback to the core team that's iterating on OpenFGA in the repo's [Discussions](https://github.com/orgs/openfga/discussions).
 * **Community Projects**: We're building amazing things with OpenFGA. Check them out in our [Community Projects](https://github.com/openfga/community#community-projects) list.
