@@ -83,7 +83,7 @@ Nothing here is set in stone. Please improve this document as necessary. Pull re
 
 ## Contributing
 
-We welcome contributions from the broader community! If you would like to contribute to OpenFGA, please review the [CONTRIBUTING.md](https://github.com/openfga/.github/blob/main/CONTRIBUTING.md) file for instructions.
+We welcome contributions from the broader community! If you would like to contribute to OpenFGA, take a look at the [CONTRIBUTING.md](https://github.com/openfga/.github/blob/main/CONTRIBUTING.md) guide.
 
 ## Support
 
