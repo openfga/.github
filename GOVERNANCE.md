@@ -79,7 +79,7 @@ Teams are not required to have designated leaders. Teams may choose to designate
 
 ### Amending the Governance Model
 
-Nothing here is set in stone. Please improve this document as necessary. Pull requests to this process (`GOVERNANCE.md`) will be reviewed by the **core** and @product teams.
+Nothing here is set in stone. Please improve this document as necessary. Pull requests to this process (`GOVERNANCE.md`) will be reviewed by the @core and @product teams.
 
 ## Contributing
 
