@@ -65,7 +65,7 @@ From there, being promoted to being a member of the @core or @product teams when
 
 Should you wish to leave a team, reach out to a member of the Core team via any of the channels in the [Support](#support) section with a request.
 
-### Creating a new 
+### Creating a new team
 
 As the product grows, it will become more useful to further subdivide. This will enable the project to assign code coverage, streamline conversations, and create subject-matter-expertise where possible. If you have an idea for a new team, start a [GitHub Discussion](https://github.com/orgs/openfga/discussions) in order for the community to track it and gain alignment.
 
