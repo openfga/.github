@@ -34,7 +34,7 @@ Responsibilities include:
 - ensure RFCs are acceptable to maintain
 - govern OpenFGA repos
 - PR review and merging
-- curating releases. 
+- curating releases
 
 Secondary priorities involve collaborating with @product on the roadmap, user research, and iterating on the product experience.
 
