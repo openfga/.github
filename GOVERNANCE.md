@@ -17,7 +17,7 @@ For copyright and trademark information, see [Trademark Usage](https://www.linux
 OpenFGA uses a Teams concept to divide up roles and responsibilities. Teams are defined in Github.
 
 ### Teams
-Currently there exist three main teams:
+Currently there are three main teams:
 
 * Core
 * Product
@@ -27,7 +27,7 @@ Currently there exist three main teams:
 
 The @core team is concerned with the codebase and technical implementation details for the product. 
 
-Responsibilities include:
+*Responsibilities include:*
 - review RFCs or delegate their review to a more relevant team
 - reach consensus and usher each RFC through the resolution process
 - collaborate with @community to collect feedback for RFCs
@@ -42,7 +42,7 @@ Secondary priorities involve collaborating with @product on the roadmap, user re
 
 The @product team is concerned with iterating on the product itself. They govern the product roadmap, product marketing, design principles, user research and subject matter expertise, and other product concerns.
 
-Responsibilities include:
+*Responsibilities include:*
 - develop and iterate on the governance model
 - review RFCs or delegate their review to a more relevant team
 - maintain OpenFGA's design principles through the RFC review process
@@ -59,11 +59,11 @@ The @contributors team exists to keep track of and grant certain priveliges to a
 
 Anyone can become a member of @contributors team: reach out to anyone on the @core or @product teams via any of the channels in the [Support](#support) section with a request to join and they will make the change.
 
-From there, being promoted to being a member of the @core or @product teams when they have a will to be more involved in any of those teams' responsibilities, and have made significant enough contributions to the product that they can get a majority vote from those teams. For more info, see the [Governance-Related Policies and Procedures](#governance-related-policies-and-procedures) section.
+From there, when someone has a will to be more involved in any of the other teams' responsibilities, and have made significant enough contributions to the product, being promoted to being a member of the @core or @product teams requires making a request and recieving a majority vote from those teams. For more info, see the [Governance-Related Policies and Procedures](#governance-related-policies-and-procedures) section.
 
 ### Leaving a team
 
-Should you wish to leave a team, reach out to a member of the Core team via any of the channels in the [Support](#support) section with a request.
+Should someone wish to leave a team, they can reach out to a member of the Core team via any of the channels in the [Support](#support) section with a request.
 
 ### Creating a new team
 
