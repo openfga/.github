@@ -50,5 +50,5 @@ OpenFGA has high quality developer tooling, including:
 * **Contributing**: Read this [CONTRIBUTING.md](https://github.com/openfga/.github/blob/main/CONTRIBUTING.md) guide for an outline for interacting with the OpenFGA community and its governance structure, as well as details how to write, test, and submit code changes.
 * **Documentation**: Read about OpenFGA at the [project's website and documentation repository, https://openfga.dev](https://openfga.dev).
 * **Discord**: Join the conversation on [Discord](https://discord.gg/8naAwJfWN6).
-* **Discussions**: Get help, talk about new features, and give feedback to the core OpenFGA team in the orignization's [Discussions](https://github.com/orgs/openfga/discussions).
+* **Discussions**: Get help, talk about new features, and give feedback to the core OpenFGA team in the Github's [Discussions](https://github.com/orgs/openfga/discussions).
 * **Community Projects**: We're building amazing things with OpenFGA. Check them out in our [Community Projects](https://github.com/openfga/community#community-projects) list.
