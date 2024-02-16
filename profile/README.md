@@ -1,6 +1,6 @@
 ## Introducing: OpenFGA 👋
 
-[![Discord Server](https://img.shields.io/discord/759188666072825867?color=7289da&logo=discord "Discord Server")](https://discord.com/channels/759188666072825867/930524706854031421)
+![CNCF Slack | #openfga](https://img.shields.io/badge/cncf-openfga-1AA7EC)
 [![Twitter](https://img.shields.io/twitter/follow/openfga?color=%23179CF0&logo=twitter&style=flat-square "@openfga on Twitter")](https://twitter.com/openfga)
 [![CLOMonitor](https://img.shields.io/endpoint?url=https://clomonitor.io/api/projects/cncf/openfga/badge)](https://clomonitor.io/projects/cncf/openfga)
 [![OpenFGA YouTube Channel](https://img.shields.io/badge/YouTube-Subscribe-red?style=flat&logo=youtube)](https://www.youtube.com/@OpenFGA)
@@ -40,13 +40,13 @@ OpenFGA has high quality developer tooling, including:
 - A [CLI](https://github.com/openfga/cli) to operate an OpenFGA server, import/export models and tuples, test models.
 - A [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=openfga.openfga-vscode) with syntax coloring and validation for models and tests.
 - A [Helm Chart](https://github.com/openfga/helm-charts) to simplify deployment in Kubernetes clusters.
-- GitHub Actions for [testing](https://github.com/marketplace/actions/openfga-model-testing-action) and [deploying](https://github.com/marketplace/actions/openfga-model-deploy-action) models through CI/CD
+- GitHub Actions for [testing](https://github.com/marketplace/actions/openfga-model-testing-action) and [deploying](https://github.com/marketplace/actions/openfga-model-deploy-action) models through CI/CD.
 
 ---
 ### 👩‍💻 Useful resources
 
 * **Contributing**: Read this [CONTRIBUTING.md](https://github.com/openfga/.github/blob/main/CONTRIBUTING.md) guide for an outline for interacting with the OpenFGA community and its governance structure, as well as details how to write, test, and submit code changes.
 * **Documentation**: Read about OpenFGA at the [project's website and documentation repository, https://openfga.dev](https://openfga.dev).
-* **Discord**: Join the conversation on [Discord](https://discord.gg/8naAwJfWN6).
+* **Slack**: Request access to the [CNCF Slack Community](https://slack.cncf.io/), and join the [#openfga](https://cloud-native.slack.com/archives/C06G1NNH47N) channel.
 * **Discussions**: Get help, talk about new features, and give feedback to the core OpenFGA team in the Github's [Discussions](https://github.com/orgs/openfga/discussions).
 * **Community Projects**: We're building amazing things with OpenFGA. Check them out in our [Community Projects](https://github.com/openfga/community#community-projects) list.
