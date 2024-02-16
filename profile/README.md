@@ -40,6 +40,7 @@ OpenFGA has high quality developer tooling, including:
 - A [CLI](https://github.com/openfga/cli) to operate an OpenFGA server, import/export models and tuples, test models.
 - A [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=openfga.openfga-vscode) with syntax coloring and validation for models and tests.
 - A [Helm Chart](https://github.com/openfga/helm-charts) to simplify deployment in Kubernetes clusters.
+- GitHub Actions for [testing](https://github.com/marketplace/actions/openfga-model-testing-action) and [deploying](https://github.com/marketplace/actions/openfga-model-deploy-action) models through CI/CD
 
 ---
 ### 👩‍💻 Useful resources
