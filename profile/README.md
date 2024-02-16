@@ -10,7 +10,6 @@ OpenFGA is a high performance and flexible authorization/permission engine built
 OpenFGA was originally developed by Auth0/Okta, and  [donated to the Cloud Native Computing Foundation](https://www.cncf.io/projects/openfga/) on September 14, 2022, and is currently at the Sandbox level of graduation.
 
 ---
-
 ### 🙋‍♀️ What's OpenFGA all about?
 
 This community wants to solve authorization for everyone, regardless of the scale or complexity required for any given piece of software, and we think OpenFGA's design is the way to do it. In particular, the *fine-grained authorization* approach which OpenFGA incorporates is becoming an increasingly critical element of access control in software:
@@ -22,7 +21,6 @@ This community wants to solve authorization for everyone, regardless of the scal
 * **Security, compliance, and privacy are mandatory problems** to solve for any software application from day one, and authorization is a big part of any solution. In fact, the [top 2021 OWASP risk is broken access control](https://owasp.org/Top10/).
 
 ---
-
 ### 💡Why is it important to centralize authorization?
 
 Centralizing your authorization logic and decisions into a single service that has the flexibility to handle use cases across your different products gives you distinct advantages:
@@ -34,7 +32,7 @@ Centralizing your authorization logic and decisions into a single service that h
 * **Simpler to switch teams**:  Developers can use the same authorization concepts and APIs regardless of the team they work on.
 
 ---
-### 👩‍💻 Developer Tooling
+### 🛠️ Developer Tooling
 
 OpenFGA has high quality developer tooling, including:
 
@@ -44,7 +42,6 @@ OpenFGA has high quality developer tooling, including:
 - A [Helm Chart](https://github.com/openfga/helm-charts) to simplify deployment in Kubernetes clusters.
 
 ---
-
 ### 👩‍💻 Useful resources
 
 * **Contributing**: Read this [CONTRIBUTING.md](https://github.com/openfga/.github/blob/main/CONTRIBUTING.md) guide for an outline for interacting with the OpenFGA community and its governance structure, as well as details how to write, test, and submit code changes.
