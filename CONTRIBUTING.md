@@ -6,7 +6,9 @@ It takes a lot of work from a lot of people to build a great authorization syste
 
 OpenFGA welcomes feedback and contributions from anyone who might be interested in helping the project.
 
-The [project maintainers](https://github.com/openfga/community/blob/main/MAINTAINERS) are here to help. This is the group of people responsible for organizing the backlog of [issues](https://github.com/openfga/openfga/issues), reviewing [pull requests](https://github.com/openfga/openfga/pulls), and all code within this repository. Maintainers are working to keep the OpenFGA product aligned with its [design principles](https://github.com/openfga/rfcs/blob/main/DESIGN_PRINCIPLES.md), and to make it easy for anyone to take part in building and shaping OpenFGA's development and roadmap.
+The [project maintainers](https://github.com/openfga/community/blob/main/MAINTAINERS) are here to help. This is the group of people responsible for organizing the backlog of [issues in OpenFGA](https://github.com/openfga/openfga/issues) and other [issues across our repositories](https://github.com/search?q=org%3Aopenfga+is%3Aissue+is%3Aopen++&type=issues&state=open), reviewing [pull requests](https://github.com/openfga/openfga/pulls), and all code within this repository. Maintainers are working to keep the OpenFGA product aligned with its [design principles](https://github.com/openfga/rfcs/blob/main/DESIGN_PRINCIPLES.md), and to make it easy for anyone to take part in building and shaping OpenFGA's development and roadmap.
+
+organizing the backlog of [issues in OpenFGA](..) 
 
 If you are planning to implement a new feature, you may want to submit an [RFC](https://github.com/openfga/rfcs/) first - it's not necessary for every change, but requesting feedback early can help save time and effort. See ["When the RFC process is necessary"](https://github.com/openfga/rfcs#when-the-rfc-process-is-necessary) for more information.
 
