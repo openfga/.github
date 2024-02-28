@@ -1,6 +1,7 @@
 ## Introducing: OpenFGA 👋
 
 ![CNCF Slack | #openfga](https://img.shields.io/badge/cncf-openfga-1AA7EC)
+[![CNCF Slack | #openfga](https://img.shields.io/badge/cncf_slack-%23openfga-40abb8.svg?logo=slack)](https://cloud-native.slack.com/archives/C06G1NNH47N)
 [![Twitter](https://img.shields.io/twitter/follow/openfga?color=%23179CF0&logo=twitter&style=flat-square "@openfga on Twitter")](https://twitter.com/openfga)
 [![CLOMonitor](https://img.shields.io/endpoint?url=https://clomonitor.io/api/projects/cncf/openfga/badge)](https://clomonitor.io/projects/cncf/openfga)
 [![OpenFGA YouTube Channel](https://img.shields.io/badge/YouTube-Subscribe-red?style=flat&logo=youtube)](https://www.youtube.com/@OpenFGA)
