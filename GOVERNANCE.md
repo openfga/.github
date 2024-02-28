@@ -89,7 +89,6 @@ We welcome contributions from the broader community! If you would like to contri
 
 If you have any questions, feedback, or ideas for OpenFGA, we would love to hear from you. Here are a few ways you can get in touch:
 
-- Join the discussion on our [GitHub Discussions](https://github.com/orgs/openfga/discussions) page
-- Chat with us on [Discord](https://discord.gg/8naAwJfWN6)
+* Join the [OpenFGA Community](https://openfga.dev/community) in the CNCF Slack or [Github Discussions](https://github.com/orgs/openfga/discussions).
 - Reach out to us [on Twitter](https://twitter.com/OpenFGA)
 - Send an email to [contact@openfga.dev](mailto:contact@openfga.dev)
