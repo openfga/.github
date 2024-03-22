@@ -66,9 +66,9 @@ When you're ready, submit a pull request!
 
 * All changes are required to be [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) Licensed.
 
-* Dependencies & sub dependencies have to have compatible licenses. The existing repositories have [FOSSA checks](https://fossa.com/) integrated as part of their Github Actions CI/CD workflow. New repositories will need to have similar checks in place.
+* Dependencies & sub dependencies have to have compatible licenses. The existing repositories have [FOSSA checks](https://fossa.com/) integrated as part of their GitHub Actions CI/CD workflow. New repositories will need to have similar checks in place.
 
-* New contributions have to pass several security tests. The existing repositories have [Snyk](https://snyk.io/) and [Semgrep](https://semgrep.dev/) integrated as part of their Github Actions CI/CD workflow. New repositories will need to have similar checks in place.
+* New contributions have to pass several security tests. The existing repositories have [Snyk](https://snyk.io/) and [Semgrep](https://semgrep.dev/) integrated as part of their GitHub Actions CI/CD workflow. New repositories will need to have similar checks in place.
 
 * Contributions should introduce minimal to no dependencies. This helps with maintenance as well as security and legal considerations.
 
