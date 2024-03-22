@@ -53,7 +53,7 @@ The @product team is concerned with iterating on the product itself. They govern
 
 #### Contributors
 
-The @contributors team exists to keep track of and grant certain priveliges to anyone who contributes to the product.
+The @contributors team exists to keep track of and grant certain privileges to anyone who contributes to the product.
 
 ### Joining a team
 
