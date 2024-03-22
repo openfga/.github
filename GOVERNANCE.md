@@ -59,7 +59,7 @@ The @contributors team exists to keep track of and grant certain privileges to a
 
 Anyone can become a member of @contributors team: reach out to anyone on the @core or @product teams via any of the channels in the [Support](#support) section with a request to join and they will make the change.
 
-From there, when someone has a will to be more involved in any of the other teams' responsibilities, and have made significant enough contributions to the product, being promoted to being a member of the @core or @product teams requires making a request and recieving a majority vote from those teams. For more info, see the [Governance-Related Policies and Procedures](#governance-related-policies-and-procedures) section.
+From there, when someone has a will to be more involved in any of the other teams' responsibilities, and have made significant enough contributions to the product, being promoted to being a member of the @core or @product teams requires making a request and receiving a majority vote from those teams. For more info, see the [Governance-Related Policies and Procedures](#governance-related-policies-and-procedures) section.
 
 ### Leaving a team
 
