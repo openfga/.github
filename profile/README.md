@@ -45,6 +45,7 @@ OpenFGA has high quality developer tooling, including:
 ---
 ### 👩‍💻 Useful resources
 
+* **Adopters**: Find out [who is using OpenFGA in production](https://github.com/openfga/community/blob/main/ADOPTERS.md)
 * **Contributing**: Read this [CONTRIBUTING.md](https://github.com/openfga/.github/blob/main/CONTRIBUTING.md) guide for an outline for interacting with the OpenFGA community and its governance structure, as well as details how to write, test, and submit code changes.
 * **Documentation**: Read about OpenFGA at the [project's website and documentation repository, https://openfga.dev](https://openfga.dev).
 * **Community**: Join the [OpenFGA Community](https://openfga.dev/community) in the CNCF Slack or [Github Discussions](https://github.com/orgs/openfga/discussions).
