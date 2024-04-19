@@ -58,7 +58,7 @@ When you're ready, submit a pull request!
 
 * As with any community interaction, you must follow the [Code of Conduct](./CODE_OF_CONDUCT.md).
 
-* All changes must have adequate test coverage. For instruction on writing and running the various test suites, see Testing your changes.
+* All changes must have adequate test coverage. For instructions on writing and running the various test suites, see the CONTRIBUTING guide in each individual repository.
 
 * All contributors should sign the [Contributor License Agreement](https://docs.linuxfoundation.org/lfx/easycla/v2-current/contributors). You'll get prompted to sign it the first time you submit a Pull Request.
 
