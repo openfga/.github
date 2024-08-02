@@ -35,7 +35,7 @@ The @core team is concerned with the codebase and technical implementation detai
 - govern OpenFGA repos
 - PR review and merging
 - curating releases
-- receive security reports, triage them, and response in accordance to the [Security Policy](https://github.com/openfga/community/security/policy)
+- receive security reports, triage them, and respond in accordance to the [Security Policy](https://github.com/openfga/community/security/policy)
 
 Secondary priorities involve collaborating with @product on the roadmap, user research, and iterating on the product experience.
 
