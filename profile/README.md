@@ -9,6 +9,8 @@ OpenFGA is a high performance and flexible authorization/permission engine built
 
 OpenFGA was originally developed by Auth0/Okta, and [donated to the Cloud Native Computing Foundation](https://www.cncf.io/projects/openfga/) on September 14, 2022, and is currently at the Sandbox level of graduation.
 
+It's currently being maintained by [Okta and Grafana employees](https://github.com/openfga/community/blob/main/MAINTAINERS).
+
 ---
 ### 🙋‍♀️ What's OpenFGA all about?
 
