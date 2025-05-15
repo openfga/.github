@@ -20,7 +20,7 @@ This community wants to solve authorization for everyone, regardless of the scal
 
 * **Traditional Role-Based Access Control (RBAC) solutions become difficult to administer and scale**, but fine-grained approaches like OpenFGA can create authorization models that are still easy to understand and visualize for complex authorization patterns.
 
-* **Security, compliance, and privacy are mandatory problems** to solve for any software application from day one, and authorization is a big part of any solution. In fact, the [top 2021 OWASP risk is broken access control](https://owasp.org/Top10/).
+* **Security, compliance, and privacy are mandatory problems** to solve for any software application from day one, and authorization is a big part of any solution. In fact, the top risk in the [OWASP Top 10 API Security Risks list](https://owasp.org/API-Security/editions/2023/en/0x11-t10/) is [Broken Object Level Authorization](https://owasp.org/API-Security/editions/2023/en/0xa1-broken-object-level-authorization/).
 
 ---
 ### 💡Why is it important to centralize authorization?
@@ -40,7 +40,7 @@ OpenFGA has high quality developer tooling, including:
 
 - SDKs for [Go](https://github.com/openfga/go-sdk), [JavaScript](https://github.com/openfga/js-sdk), [.NET](https://github.com/openfga/dotnet-sdk), [Python](https://github.com/openfga/python-sdk), [Java](https://github.com/openfga/java-sdk).
 - A [CLI](https://github.com/openfga/cli) to operate an OpenFGA server, import/export models and tuples and test models.
-- A [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=openfga.openfga-vscode) with syntax coloring and validation for models and tests.
+- Extensions to [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=openfga.openfga-vscode) and [JetBrains IDEs](https://plugins.jetbrains.com/plugin/24394-openfga) with syntax coloring and validation for models and tests.
 - A [Helm Chart](https://github.com/openfga/helm-charts) to simplify deployment in Kubernetes clusters.
 - GitHub Actions for [testing](https://github.com/marketplace/actions/openfga-model-testing-action) and [deploying](https://github.com/marketplace/actions/openfga-model-deploy-action) models through CI/CD
 
