@@ -9,7 +9,7 @@ OpenFGA is a high performance and flexible authorization/permission engine built
 
 OpenFGA was originally developed by Auth0/Okta, and [donated to the Cloud Native Computing Foundation](https://www.cncf.io/projects/openfga/) on September 14, 2022, and is currently at the Sandbox level of graduation.
 
-It's currently being maintained by [Okta and Grafana employees](https://github.com/openfga/community/blob/main/MAINTAINERS).
+It's currently being maintained by [Okta and Grafana employees](https://github.com/openfga/community/blob/main/MAINTAINERS.md).
 
 ---
 ### 🙋‍♀️ What's OpenFGA all about?
@@ -43,7 +43,7 @@ OpenFGA has high quality developer tooling, including:
 - Extensions to [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=openfga.openfga-vscode) and [JetBrains IDEs](https://plugins.jetbrains.com/plugin/24394-openfga) with syntax coloring and validation for models and tests.
 - A [Helm Chart](https://github.com/openfga/helm-charts) to simplify deployment in Kubernetes clusters.
 - GitHub Actions for [testing](https://github.com/marketplace/actions/openfga-model-testing-action) and [deploying](https://github.com/marketplace/actions/openfga-model-deploy-action) models through CI/CD
-
+- A [Terraform Provider](https://github.com/openfga/terraform-provider-openfga) to manage OpenFGA instances with code.
 ---
 ### 👩‍💻 Useful resources
 
