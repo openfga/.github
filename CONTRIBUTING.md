@@ -12,6 +12,10 @@ If you are planning to implement a new feature, you may want to submit an [RFC](
 
 The rest of this document describes how to contribute code, but there are many other ways to contribute that are incredibly helpful: helping others in Discussions and Slack, providing feedback on RFCs and releases, triaging Issues, improving the documentation - any little bit helps.
 
+## Using Generative AI to contribute to OpenFGA
+
+You are allowed to use Generative AI to contribute to OpenFGA under under the [Linux Foundation Generative AI policy](https://www.linuxfoundation.org/legal/generative-ai).
+
 ## Submitting a Pull Request to an OpenFGA Repository
 
 1. Read our [Pull Request Requirements](#pull-request-requirements), [Pull Request Structure and Behavior](#pull-request-structure-and-behaviour) and [Commit Guidelines](#commit-guidelines) to understand what to include in commits and PRs.
