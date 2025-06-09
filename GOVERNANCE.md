@@ -21,6 +21,7 @@ Currently there are three main teams:
 
 * Core
 * Product
+* Maintainers
 * Contributors
 
 #### Core
@@ -28,14 +29,14 @@ Currently there are three main teams:
 The @core team is concerned with the codebase and technical implementation details for the product. 
 
 *Responsibilities include:*
-- review RFCs or delegate their review to a more relevant team
-- reach consensus and usher each RFC through the resolution process
-- collaborate with @community to collect feedback for RFCs
-- ensure RFCs are acceptable to maintain
-- govern OpenFGA repos
+- Review RFCs or delegate their review to a more relevant team
+- Reach consensus and usher each RFC through the resolution process
+- Collaborate with @community to collect feedback for RFCs
+- Ensure RFCs are acceptable to maintain
+- Govern OpenFGA repos
 - PR review and merging
-- curating releases
-- receive security reports, triage them, and respond in accordance to the [Security Policy](https://github.com/openfga/community/security/policy)
+- Curating releases
+- Receive security reports, triage them, and respond in accordance to the [Security Policy](https://github.com/openfga/community/security/policy)
 
 Secondary priorities involve collaborating with @product on the roadmap, user research, and iterating on the product experience.
 
@@ -44,13 +45,25 @@ Secondary priorities involve collaborating with @product on the roadmap, user re
 The @product team is concerned with iterating on the product itself. They govern the product roadmap, product marketing, design principles, user research and subject matter expertise, and other product concerns.
 
 *Responsibilities include:*
-- develop and iterate on the governance model
-- review RFCs or delegate their review to a more relevant team
-- maintain OpenFGA's design principles through the RFC review process
-- clarify OpenFGA's design principles over time
-- collaborate with @core to develop a roadmap that fits OpenFGA's design principles
-- collaborate with @core and @contributors on user research
-- iterate on the product experience
+- Develop and iterate on the governance model
+- Review RFCs or delegate their review to a more relevant team
+- Maintain OpenFGA's design principles through the RFC review process
+- Clarify OpenFGA's design principles over time
+- Collaborate with @core to develop a roadmap that fits OpenFGA's design principles
+- Collaborate with @core and @maintainers on user research
+- Iterate on the product experience
+
+#### Maintainers
+
+The @maintainers team consists of users who can contribute _and_ approve PRs. They help to ensure contributions align with the project's goals, facilitate collaboration, and maintain the quality of contributions.
+
+*Responsibilities include:*
+- Contribute based on backlog items
+- Review incoming PRs and ensure they meet project standards
+- Participate in discussions for features and provide feedback
+- Consult with other team members to clarify requirements
+- Collaborate with the @core team on technical feasibility and implementation details
+- Provide input to the @product team based on community feedback
 
 #### Contributors
 
