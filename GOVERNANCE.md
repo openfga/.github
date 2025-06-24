@@ -62,7 +62,7 @@ The @maintainers team consists of users who can contribute _and_ approve PRs. Th
 - Review incoming PRs and ensure they meet project standards
 - Participate in discussions for features and provide feedback
 - Consult with other team members to clarify requirements
-- Collaborate with the @core team on technical feasibility and implementation details
+- Collaborate with other maintainers on technical feasibility and implementation details
 - Provide input to the @product team based on community feedback
 
 #### Contributors
