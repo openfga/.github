@@ -16,7 +16,15 @@ If your PR is under active development, please submit it as a "draft". Once it's
 #### What changes are made to solve it?
 
 ## References
-<!-- Provide a list of any applicable references here (GitHub Issue, [OpenFGA RFC](https://github.com/openfga/rfcs), other PRs, etc..) -->
+<!--
+Provide a list of any applicable references here (GitHub Issue, [OpenFGA RFC](https://github.com/openfga/rfcs), other PRs, etc..). We prefer an accompanying issue for all non-trivial PRs.
+
+When referencing links, follow these examples:
+* closes https://github.com/openfga/{repo}/issues/{issue_number}
+* reverts https://github.com/openfga/{repo}/pull/{pr_number}
+* followup https://github.com/openfga/{repo}/pull/{pr_number}
+* blocked by https://github.com/openfga/{repo}/pull/{pr_number}
+-->
 
 ## Review Checklist
 - [ ] I have clicked on ["allow edits by maintainers"](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork).
