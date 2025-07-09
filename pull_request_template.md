@@ -9,6 +9,11 @@ If your PR is under active development, please submit it as a "draft". Once it's
 
 ## Description
 <!-- Provide a detailed description of the changes -->
+#### What problem is being solved?
+
+#### How is it being solved?
+
+#### What changes are made to solve it?
 
 ## References
 <!-- Provide a list of any applicable references here (GitHub Issue, [OpenFGA RFC](https://github.com/openfga/rfcs), other PRs, etc..) -->
