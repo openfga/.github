@@ -1,0 +1,167 @@
+header:
+  schema-version: 2.0.0
+  last-updated: '2025-07-24'
+  last-reviewed: '2025-07-24'
+  url: https://github.com/openfga
+  comment: |
+    OpenFGA is a high-performance and flexible authorization/permission engine built for developers
+    and inspired by Google Zanzibar. 
+
+project:
+  name: OpenFGA
+  homepage: https://openfga.dev
+  roadmap: https://github.com/orgs/openfga/projects/1
+  steward:
+    uri: https://www.cncf.io
+    comment: |
+      OpenFGA is a Cloud Native Computing Foundation (CNCF) Sandbox project.
+
+  administrators:
+  - name: Andres Aguiar
+      affiliation: Okta
+      email: andres.aguiar@okta.com
+      social: https://github.com/aaguiarz
+      primary: true
+  - name: Riccardo Cocetta
+      affiliation: Okta
+      email: riccardo.cocetta@okta.com
+      social: https://github.com/rcocetta
+      primary: false
+  - name: Yamil Asusta
+      affiliation: Okta
+      email: yamil.asusta@okta.com
+      social: https://github.com/elbuo8
+      primary: false
+  - name: Poovamraj Thanganadar Thiagarajan
+      affiliation: Okta
+      email: poovamraj.thanganadarthiagarajan@okta.com
+      social: https://github.com/poovamraj
+      primary: false
+  - name: Jakub Hertyk
+      affiliation: Okta
+      email: jakub.hertyk@okta.com
+      social: https://github.com/curfew-marathon
+      primary: false
+
+  repositories:
+    - name: openfga
+      url: https://github.com/openfga/openfga
+      comment: |
+        High‑performance and flexible authorization engine built for developers and inspired by Google Zanzibar.
+    - name: openfga.dev
+      url: https://github.com/openfga/openfga.dev
+      comment: |
+        OpenFGA website and documentation.
+    - name: community
+      url: https://github.com/openfga/community
+      comment: |
+        The community repository is the place to go for OpenFGA support.
+    - name: sample-stores
+      url: https://github.com/openfga/sample-stores
+      comment: |
+        Examples of OpenFGA models and store content.
+    - name: cli
+      url: https://github.com/openfga/cli
+      comment: |
+        A cross‑platform CLI to interact with an OpenFGA server.
+    - name: go-sdk
+      url: https://github.com/openfga/go-sdk
+      comment: |
+        OpenFGA SDK for Go.
+    - name: dotnet-sdk
+      url: https://github.com/openfga/dotnet-sdk
+      comment: |
+        OpenFGA SDK for .NET.
+    - name: java-sdk
+      url: https://github.com/openfga/java-sdk
+      comment: |
+        OpenFGA SDK for Java.
+    - name: js-sdk
+      url: https://github.com/openfga/js-sdk
+      comment: |
+        OpenFGA SDK for Node.js and JavaScript.
+    - name: python-sdk
+      url: https://github.com/openfga/python-sdk
+      comment: |
+        OpenFGA SDK for Python 3.
+    - name: sdk-generator
+      url: https://github.com/openfga/sdk-generator
+      comment: |
+        OpenFGA client SDK generator.
+    - name: spring-boot-starter
+      url: https://github.com/openfga/spring-boot-starter
+      comment: |
+        A Spring Boot starter for OpenFGA.
+    - name: helm-charts
+      url: https://github.com/openfga/helm-charts
+      comment: |
+        Official Helm charts for the OpenFGA project.
+    - name: terraform-provider-openfga
+      url: https://github.com/openfga/terraform-provider-openfga
+      comment: |
+        Terraform provider for OpenFGA.
+    - name: intellij-plugin
+      url: https://github.com/openfga/intellij-plugin
+      comment: |
+        OpenFGA plugin for JetBrain IDEs.
+    - name: vscode-ext
+      url: https://github.com/openfga/vscode-ext
+      comment: |
+        An OpenFGA extension for VS Code.
+    - name: language
+      url: https://github.com/openfga/language
+      comment: |
+        Grammar for the OpenFGA modeling language.
+    - name: frontend-utils
+      url: https://github.com/openfga/frontend-utils
+      comment: |
+        Helpful functions for building OpenFGA model authoring front‑ends.
+    - name: api
+      url: https://github.com/openfga/api
+      comment: |
+        Protocol Buffers used by OpenFGA.
+    - name: action-openfga-deploy
+      url: https://github.com/openfga/action-openfga-deploy
+      comment: |
+        GitHub Action for deploying your authorization model to an OpenFGA store.
+    - name: action-openfga-test
+      url: https://github.com/openfga/action-openfga-test
+      comment: |
+        GitHub Action for testing your OpenFGA authorization model.
+    - name: flask-demo
+      url: https://github.com/openfga/flask-demo
+      comment: |
+        A demo application that uses FGA for access control written in Flask.
+    - name: homebrew-tap
+      url: https://github.com/openfga/homebrew-tap
+      comment: |
+        A collection of Homebrew formulae for OpenFGA.
+    - name: openfga-contrib
+      url: https://github.com/openfga/openfga-contrib
+      comment: |
+        Community contributed implementations of OpenFGA components.
+    - name: openfga-envoy
+      url: https://github.com/openfga/openfga-envoy
+      comment: |
+        Enforce access control with OpenFGA on Envoy.
+    - name: rfcs
+      url: https://github.com/openfga/rfcs
+      comment: |
+        An open process for designing substantial changes to OpenFGA.
+
+  vulnerability-reporting:
+    reports-accepted: true
+    bug-bounty-available: false
+    contact:
+      name: OpenFGA Security Team
+      email: security@openfga.dev
+      primary: true
+    security-policy: https://github.com/openfga/openfga/security/policy
+
+  documentation:
+    quickstart-guide: https://openfga.dev/docs/getting-started
+    detailed-guide: https://openfga.dev/docs/getting-started/setup-openfga/overview
+    code-of-conduct: https://github.com/cncf/foundation/blob/main/code-of-conduct.md
+    release-process: https://github.com/openfga/openfga/blob/main/RELEASES.md
+    support-policy: https://openfga.dev/community
+    signature-verification: https://github.com/openfga/community/blob/main/provenance-implementation/openfga.md
