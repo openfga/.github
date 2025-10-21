@@ -18,30 +18,30 @@ project:
 
   administrators:
   - name: Andres Aguiar
-      affiliation: Okta
-      email: andres.aguiar@okta.com
-      social: https://github.com/aaguiarz
-      primary: true
+    affiliation: Okta
+    email: andres.aguiar@okta.com
+    social: https://github.com/aaguiarz
+    primary: true
   - name: Riccardo Cocetta
-      affiliation: Okta
-      email: riccardo.cocetta@okta.com
-      social: https://github.com/rcocetta
-      primary: false
+    affiliation: Okta
+    email: riccardo.cocetta@okta.com
+    social: https://github.com/rcocetta
+    primary: false
   - name: Yamil Asusta
-      affiliation: Okta
-      email: yamil.asusta@okta.com
-      social: https://github.com/elbuo8
-      primary: false
+    affiliation: Okta
+    email: yamil.asusta@okta.com
+    social: https://github.com/elbuo8
+    primary: false
   - name: Poovamraj Thanganadar Thiagarajan
-      affiliation: Okta
-      email: poovamraj.thanganadarthiagarajan@okta.com
-      social: https://github.com/poovamraj
-      primary: false
+    affiliation: Okta
+    email: poovamraj.thanganadarthiagarajan@okta.com
+    social: https://github.com/poovamraj
+    primary: false
   - name: Jakub Hertyk
-      affiliation: Okta
-      email: jakub.hertyk@okta.com
-      social: https://github.com/curfew-marathon
-      primary: false
+    affiliation: Okta
+    email: jakub.hertyk@okta.com
+    social: https://github.com/curfew-marathon
+    primary: false
 
   repositories:
     - name: openfga
