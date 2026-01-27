@@ -6,7 +6,7 @@ It takes a lot of work from a lot of people to build a great authorization syste
 
 OpenFGA welcomes feedback and contributions from anyone who might be interested in helping the project.
 
-The [project maintainers](https://github.com/openfga/community/blob/main/MAINTAINERS) are here to help. This is the group of people responsible for organizing the backlog of [issues in OpenFGA](https://github.com/openfga/openfga/issues) and other [issues across our repositories](https://github.com/search?q=org%3Aopenfga+is%3Aissue+is%3Aopen++&type=issues&state=open), reviewing [pull requests](https://github.com/openfga/openfga/pulls), and all code within this repository. Maintainers are working to keep the OpenFGA product aligned with its [design principles](https://github.com/openfga/rfcs/blob/main/DESIGN_PRINCIPLES.md), and to make it easy for anyone to take part in building and shaping OpenFGA's development and roadmap.
+The [project maintainers](https://github.com/openfga/community/blob/main/MAINTAINERS.md) are here to help. This is the group of people responsible for organizing the backlog of [issues in OpenFGA](https://github.com/openfga/openfga/issues) and other [issues across our repositories](https://github.com/search?q=org%3Aopenfga+is%3Aissue+is%3Aopen++&type=issues&state=open), reviewing [pull requests](https://github.com/openfga/openfga/pulls), and all code within this repository. Maintainers are working to keep the OpenFGA product aligned with its [design principles](https://github.com/openfga/rfcs/blob/main/DESIGN_PRINCIPLES.md), and to make it easy for anyone to take part in building and shaping OpenFGA's development and roadmap.
 
 If you are planning to implement a new feature, you may want to submit an [RFC](https://github.com/openfga/rfcs/) first - it's not necessary for every change, but requesting feedback early can help save time and effort. See ["When the RFC process is necessary"](https://github.com/openfga/rfcs#when-the-rfc-process-is-necessary) for more information.
 
@@ -72,7 +72,7 @@ When you're ready, submit a pull request!
 
 * Dependencies & sub dependencies have to have compatible licenses. The existing repositories have [FOSSA checks](https://fossa.com/) integrated as part of their GitHub Actions CI/CD workflow. New repositories will need to have similar checks in place.
 
-* New contributions have to pass several security tests. The existing repositories have [Snyk](https://snyk.io/) and [Semgrep](https://semgrep.dev/) integrated as part of their GitHub Actions CI/CD workflow. New repositories will need to have similar checks in place.
+* New contributions have to pass several security tests. The existing repositories have [Snyk](https://snyk.io/), [Socket.dev](https://socket.dev/), [OpenSSF Scorecard](https://scorecard.dev/) integrated as part of their GitHub Actions CI/CD workflow. New repositories will need to have similar checks in place.
 
 * Contributions should introduce minimal to no dependencies. This helps with maintenance as well as security and legal considerations.
 
@@ -82,8 +82,11 @@ In an ideal world, every pull request is small, but the codebase is large and so
 
 * Focus your commits so that they only change a single component at a time.
 
-* Isolate [structure changes from behavior changes][sb-changes] and label the commits appropriately - even better, batch commits of the same type into contiguous blocks.
+* Isolate [structure changes from behavior changes](https://medium.com/@kentbeck_7670/bs-changes-e574bc396aaa) and label the commits appropriately - even better, batch commits of the same type into contiguous blocks.
 
 * Give clear prose justifications for your changes in the commit messages - it's not unusual that you do some digging to uncover the motivation for a change, but if you don't mention it in the commit message the diff can feel pretty opaque.
 
-[coc]: [https://github.com/openfga/openfga/CODE_OF_CONDUCT.md]
+## Reporting Security Vulnerabilities
+
+To report a security vulnerability follow the process described [here](https://github.com/openfga/.github/blob/main/SECURITY.md).
+
