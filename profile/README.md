@@ -20,7 +20,7 @@ Originally developed by Auth0/Okta and [donated to the Cloud Native Computing Fo
 ```bash
 # Run OpenFGA locally with Docker
 docker pull openfga/openfga
-docker run -p 8080:8080 -p 3000:3000 openfga/openfga run
+docker run -p 8080:8080 openfga/openfga run
 ```
 
 Then explore the [playground](http://localhost:3000/playground), read the [documentation](https://openfga.dev/docs/getting-started), or watch the [OpenFGA Modeling Guide](https://www.youtube.com/playlist?list=PLUR5l-oTFZqWaDdhEOVt_IfPOIbKo1Ypt) for tutorials.
