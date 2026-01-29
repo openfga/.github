@@ -37,7 +37,7 @@ OpenFGA is designed to solve authorization for everyone, regardless of scale or 
 
 * **Traditional RBAC doesn't scale**. Fine-grained approaches like OpenFGA create authorization models that remain easy to understand and visualize, even for complex patterns.
 
-* **Security and compliance are mandatory**. The top risk in the [OWASP Top 10](https://owasp.org/Top10/) is [Broken Access Control](https://owasp.org/Top10/A01_2021-Broken_Access_Control/). Authorization is a critical part of any security solution.
+* **Security and compliance are mandatory**. The top risk in the [OWASP Top 10](https://owasp.org/Top10/) is [Broken Access Control](https://owasp.org/Top10/2025/A01_2025-Broken_Access_Control/). Authorization is a critical part of any security solution.
 
 ---
 
