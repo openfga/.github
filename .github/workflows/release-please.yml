@@ -275,6 +275,17 @@ jobs:
           git config user.email ${{ steps.import-gpg.outputs.email }}
           git config tag.gpgSign true
 
+      # parse-release.sh lives in this shared repo (openfga/.github), but the
+      # checkout above pulled the *caller* SDK repo. Check out the shared repo
+      # into a subdirectory so the helper script is available at runtime.
+      - name: Checkout shared release scripts
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          repository:  openfga/.github
+          ref:         main
+          path:        .shared-ci
+          fetch-depth: 1
+
       - name: Detect released package from manifest diff
         id: parse-release
         run: |
@@ -285,7 +296,7 @@ jobs:
           # plain file (no shell-escaping concerns).
           git show "HEAD~1:$MANIFEST" >"$PREV_MANIFEST"
 
-          RELEASES=$(bash .github/workflows/scripts/parse-release.sh \
+          RELEASES=$(bash .shared-ci/.github/workflows/scripts/parse-release.sh \
             manifest-diff "$MANIFEST" "$PREV_MANIFEST")
 
           echo "Detected releases:"
@@ -320,7 +331,7 @@ jobs:
 
             # Extract release notes for this version from the CHANGELOG.
             # Logic lives in scripts/parse-release.sh (unit-tested).
-            NOTES=$(bash .github/workflows/scripts/parse-release.sh \
+            NOTES=$(bash .shared-ci/.github/workflows/scripts/parse-release.sh \
               changelog-notes "$CHANGELOG" "$VERSION")
 
             # Create the GPG-signed tag (skip if it already exists) and push it.
