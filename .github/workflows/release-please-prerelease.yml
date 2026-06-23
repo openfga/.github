@@ -1,0 +1,347 @@
+name: release-please-prerelease
+
+# Reusable pre-release lane. Cuts pre-release (alpha/beta/rc) versions only from
+# a long-lived branch (e.g. develop) via release-please + a signed tag. Separate
+# from release-please.yml; SDKs onboard with a thin caller.
+
+on:
+  workflow_call:
+    inputs:
+      trigger-event:
+        description: Caller's github.event_name (workflow_dispatch or push).
+        required: true
+        type: string
+      release-version:
+        description: Pre-release version to cut (e.g. 1.4.0-beta.1). Dispatch only.
+        required: false
+        type: string
+        default: ''
+      base-branch:
+        description: Long-lived branch this lane targets.
+        required: false
+        type: string
+        default: 'develop'
+      staging-branch:
+        description: Per-base staging branch for the Release-As commit.
+        required: false
+        type: string
+        default: 'release-develop'
+    secrets:
+      RELEASER_APP_CLIENT_ID:
+        required: true
+      RELEASER_APP_PRIVATE_KEY:
+        required: true
+      GPG_PRIVATE_KEY:
+        required: true
+      GPG_PASSPHRASE:
+        required: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ inputs.base-branch }}
+  cancel-in-progress: false
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    if: inputs.trigger-event == 'workflow_dispatch' || inputs.trigger-event == 'push'
+
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
+      tag_name:        ${{ steps.release.outputs.tag_name }}
+      pr_number:       ${{ steps.release.outputs.pr_number }}
+
+    steps:
+      - name: Enforce pre-release version
+        if: inputs.trigger-event == 'workflow_dispatch'
+        run: |
+          VERSION="${{ inputs.release-version }}"
+          echo "Requested version: $VERSION"
+          if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+-(alpha|beta|rc)\.[0-9]+$ ]]; then
+            echo "::error::Pre-release version required (e.g. 1.4.0-beta.1). Got '$VERSION'."
+            exit 1
+          fi
+
+      - name: Generate token
+        id: app-token
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        with:
+          client-id:   ${{ secrets.RELEASER_APP_CLIENT_ID }}
+          private-key: ${{ secrets.RELEASER_APP_PRIVATE_KEY }}
+
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          token:       ${{ steps.app-token.outputs.token }}
+          fetch-depth: 0
+          fetch-tags:  true
+
+      # Rebuild staging branch from base (dispatch only).
+      - name: Prepare staging branch
+        if: inputs.trigger-event == 'workflow_dispatch'
+        run: |
+          git fetch origin "${{ inputs.base-branch }}"
+          git checkout -B "${{ inputs.staging-branch }}" "origin/${{ inputs.base-branch }}"
+          git push origin "${{ inputs.staging-branch }}" --force
+
+      - name: Close stale release PRs
+        if: inputs.trigger-event == 'workflow_dispatch'
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+        run: |
+          gh pr list \
+            --repo ${{ github.repository }} \
+            --head "release-please--branches--${{ inputs.staging-branch }}" \
+            --state open \
+            --json number \
+            --jq '.[].number' \
+          | xargs -r -I{} gh pr close {} \
+              --repo ${{ github.repository }} \
+              --comment "Superseded by new release workflow run - closing stale release PR."
+          echo "Stale PR cleanup done."
+
+          # Drop 'autorelease: pending' from merged PRs not merged into base.
+          gh pr list \
+            --repo ${{ github.repository }} \
+            --label "autorelease: pending" \
+            --state merged \
+            --json number,baseRefName \
+            --jq '.[] | select(.baseRefName != "${{ inputs.base-branch }}") | .number' \
+          | xargs -r -I{} gh pr edit {} \
+              --repo ${{ github.repository }} \
+              --remove-label "autorelease: pending"
+          echo "Stale autorelease label cleanup done."
+
+      - name: Import GPG key
+        id: import-gpg
+        uses: crazy-max/ghaction-import-gpg@2dc316deee8e90f13e1a351ab510b4d5bc0c82cd # v7.0.0
+        with:
+          gpg_private_key:     ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase:          ${{ secrets.GPG_PASSPHRASE }}
+          git_user_signingkey: true
+          git_commit_gpgsign:  true
+
+      - name: Configure Git
+        run: |
+          git config user.name openfga-releaser-bot
+          git config user.email ${{ steps.import-gpg.outputs.email }}
+          git config tag.gpgSign true
+
+      # Stage the Release-As commit off the base branch (dispatch only).
+      - name: Push Release-As commit
+        if: inputs.trigger-event == 'workflow_dispatch'
+        run: |
+          git checkout "${{ inputs.staging-branch }}"
+          VERSION="${{ inputs.release-version }}"
+          git commit --allow-empty \
+            -m "chore: release ${VERSION}" \
+            -m "Release-As: ${VERSION}"
+          git push origin "${{ inputs.staging-branch }}"
+
+      # dispatch -> staging branch (build PR); push -> base branch (detect merge).
+      - name: Resolve target branch
+        id: target
+        run: |
+          if [[ "${{ inputs.trigger-event }}" == "workflow_dispatch" ]]; then
+            echo "branch=${{ inputs.staging-branch }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "branch=${{ inputs.base-branch }}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Run release-please
+        uses: googleapis/release-please-action@45996ed1f6d02564a971a2fa1b5860e934307cf7 # v5.0.0
+        id: release
+        with:
+          token:         ${{ steps.app-token.outputs.token }}
+          config-file:   release-please-config.json
+          manifest-file: .release-please-manifest.json
+          target-branch: ${{ steps.target.outputs.branch }}
+
+      - name: Retarget release PR to base branch
+        if: inputs.trigger-event == 'workflow_dispatch'
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+        run: |
+          PR=$(gh pr list \
+            --repo ${{ github.repository }} \
+            --head "release-please--branches--${{ inputs.staging-branch }}" \
+            --json number \
+            --jq '.[0].number' 2>/dev/null || true)
+
+          if [[ -z "$PR" || "$PR" == "null" ]]; then
+            echo "No release PR found - nothing to retarget."
+            exit 0
+          fi
+
+          echo "Retargeting PR #$PR base -> ${{ inputs.base-branch }}"
+          gh api repos/${{ github.repository }}/pulls/$PR -X PATCH -f base="${{ inputs.base-branch }}"
+
+          # Rename head branch so the post-merge run correlates the merge commit.
+          echo "Renaming head branch to release-please--branches--${{ inputs.base-branch }}"
+          SHA=$(gh api repos/${{ github.repository }}/git/refs/heads/release-please--branches--${{ inputs.staging-branch }} --jq '.object.sha')
+          gh api \
+            repos/${{ github.repository }}/git/refs/heads/release-please--branches--${{ inputs.staging-branch }} \
+            -X PATCH \
+            -f ref="refs/heads/release-please--branches--${{ inputs.base-branch }}" \
+            -f sha="$SHA"
+
+          echo "Done. PR #$PR now targets ${{ inputs.base-branch }} with the correct head branch."
+
+  # Fires when the release PR merges into base: signed tag + draft pre-release.
+  post-release:
+    needs: release-please
+    if: inputs.trigger-event == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Generate token
+        id: app-token
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        with:
+          client-id:   ${{ secrets.RELEASER_APP_CLIENT_ID }}
+          private-key: ${{ secrets.RELEASER_APP_PRIVATE_KEY }}
+
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          token:       ${{ steps.app-token.outputs.token }}
+          fetch-depth: 0
+
+      - name: Import GPG key
+        id: import-gpg
+        uses: crazy-max/ghaction-import-gpg@2dc316deee8e90f13e1a351ab510b4d5bc0c82cd # v7.0.0
+        with:
+          gpg_private_key:     ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase:          ${{ secrets.GPG_PASSPHRASE }}
+          git_user_signingkey: true
+          git_commit_gpgsign:  true
+
+      - name: Configure Git
+        run: |
+          git config user.name openfga-releaser-bot
+          git config user.email ${{ steps.import-gpg.outputs.email }}
+          git config tag.gpgSign true
+
+      # parse-release.sh lives here; the checkout above pulled the caller repo.
+      - name: Checkout shared release scripts
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          repository:  openfga/.github
+          ref:         main
+          path:        .shared-ci
+          fetch-depth: 1
+
+      - name: Detect released package from manifest diff
+        id: parse-release
+        run: |
+          MANIFEST=".release-please-manifest.json"
+          PREV_MANIFEST="$(mktemp)"
+          git show "HEAD~1:$MANIFEST" >"$PREV_MANIFEST"
+
+          RELEASES=$(bash .shared-ci/.github/workflows/scripts/parse-release.sh \
+            manifest-diff "$MANIFEST" "$PREV_MANIFEST")
+
+          echo "Detected releases:"
+          jq -r '.[] | "  - \(.tag_name)"' <<<"$RELEASES"
+          echo "releases=$RELEASES" >>"$GITHUB_OUTPUT"
+
+      - name: Create signed tag and draft pre-release
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          REPO:     ${{ github.repository }}
+          TARGET:   ${{ inputs.base-branch }}
+        run: |
+          RELEASES='${{ steps.parse-release.outputs.releases }}'
+
+          echo "$RELEASES" | jq -c '.[]' | while read -r ENTRY; do
+            PKG=$(jq -r '.component'     <<<"$ENTRY")
+            VERSION=$(jq -r '.version'   <<<"$ENTRY")
+            TAG_NAME=$(jq -r '.tag_name' <<<"$ENTRY")
+
+            echo "::group::$TAG_NAME"
+
+            # Guard: pre-release versions only.
+            if [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+              echo "::error::Refusing to tag stable version $VERSION from the pre-release lane."
+              exit 1
+            fi
+
+            if [[ "$PKG" == "." ]]; then
+              CHANGELOG="CHANGELOG.md"; TAG_GLOB="v*"
+            else
+              CHANGELOG="${PKG}/CHANGELOG.md"; TAG_GLOB="${PKG}/v*"
+            fi
+
+            NOTES=$(bash .shared-ci/.github/workflows/scripts/parse-release.sh \
+              changelog-notes "$CHANGELOG" "$VERSION")
+
+            if git rev-parse "refs/tags/$TAG_NAME" >/dev/null 2>&1; then
+              echo "Tag $TAG_NAME already exists - skipping tag creation."
+            else
+              git tag -s "$TAG_NAME" -m "Release ${TAG_NAME}"
+              git push origin "$TAG_NAME"
+            fi
+
+            git fetch --tags --quiet origin || true
+            PREV_TAG=$(git tag --list "$TAG_GLOB" --sort=-v:refname \
+              | grep -vFx "$TAG_NAME" | head -n1 || true)
+            echo "Previous tag: ${PREV_TAG:-<none>}"
+
+            GEN_PAYLOAD=$(jq -nc \
+              --arg tag "$TAG_NAME" \
+              --arg target "$TARGET" \
+              --arg prev "$PREV_TAG" \
+              '{tag_name: $tag, target_commitish: $target}
+                + (if $prev != "" then {previous_tag_name: $prev} else {} end)')
+
+            AUTO_NOTES=$(gh api \
+              --method POST \
+              -H "Accept: application/vnd.github+json" \
+              "repos/${REPO}/releases/generate-notes" \
+              --input - <<<"$GEN_PAYLOAD" \
+              --jq '.body' 2>/dev/null || true)
+
+            if [[ -n "$AUTO_NOTES" ]]; then
+              NOTES=$(printf '%s\n\n%s\n' "$NOTES" "$AUTO_NOTES")
+            else
+              echo "::warning::No auto-generated notes for $TAG_NAME - using changelog notes only."
+            fi
+
+            # Always a pre-release.
+            if gh release view "$TAG_NAME" --repo "$REPO" >/dev/null 2>&1; then
+              gh release edit "$TAG_NAME" --repo "$REPO" \
+                --title "$TAG_NAME" --notes "$NOTES" --draft --prerelease
+            else
+              gh release create "$TAG_NAME" --repo "$REPO" \
+                --title "$TAG_NAME" --notes "$NOTES" --draft --prerelease
+            fi
+
+            echo "::endgroup::"
+          done
+
+      # Reset staging branch to base for the next cycle.
+      - name: Sync staging branch to base branch
+        run: |
+          git fetch origin "${{ inputs.base-branch }}"
+          git checkout "${{ inputs.staging-branch }}" 2>/dev/null || git checkout -b "${{ inputs.staging-branch }}"
+          git reset --hard "origin/${{ inputs.base-branch }}"
+          git push origin "${{ inputs.staging-branch }}" --force
+
+      - name: Post-release summary
+        run: |
+          RELEASES='${{ steps.parse-release.outputs.releases }}'
+          {
+            echo "### Pre-releases drafted"
+            echo ""
+            echo "$RELEASES" | jq -r '.[] | "- `\(.tag_name)` - signed tag pushed, draft pre-release created"'
+            echo ""
+            echo "The publish workflow will publish each to the registry pre-release channel and undraft after a successful publish."
+          } >> "$GITHUB_STEP_SUMMARY"
+
