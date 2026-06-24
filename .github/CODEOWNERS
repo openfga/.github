@@ -1,0 +1,6 @@
+# Default owners for everything in the repo.
+# The last matching pattern takes precedence, so more specific rules below override this.
+* @openfga/product @openfga/community
+
+# Workflows are owned by the developer experience team.
+/.github/workflows/ @openfga/dx
