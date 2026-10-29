@@ -23,7 +23,7 @@ docker pull openfga/openfga
 docker run -p 8080:8080 openfga/openfga run
 ```
 
-Then explore the [playground](https://play.fga.dev), read the [documentation](https://openfga.dev/docs/getting-started), or watch the [OpenFGA Modeling Guide](https://www.youtube.com/playlist?list=PLUR5l-oTFZqWaDdhEOVt_IfPOIbKo1Ypt) for tutorials.
+Then read the [documentation](https://openfga.dev/docs/getting-started), or watch the [OpenFGA Modeling Guide](https://www.youtube.com/playlist?list=PLUR5l-oTFZqWaDdhEOVt_IfPOIbKo1Ypt) for tutorials.
 
 ---
 
